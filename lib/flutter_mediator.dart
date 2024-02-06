@@ -29,10 +29,16 @@ class FlutterMediator {
       print("openRoute-------openRoute");
       print(route.runtimeType);
       return route.send(params: params);
+    } else {
+      print("${path} route is null");
     }
   }
 
   void allRoute() {
+    for (var element in _routeMap.entries) {
+      print(element.key);
+      element.value.call("-----").runtimeType;
+    }
     print(_routeMap.keys);
   }
 }
