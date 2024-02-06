@@ -23,7 +23,7 @@ class FlutterMediator {
   }
 
   dynamic openRoute({required String path, dynamic params}) {
-    final routeBuilder = _routeMap[params];
+    final routeBuilder = _routeMap[path];
     if (routeBuilder != null) {
       final route = routeBuilder.call(path);
       print("openRoute-------openRoute");
