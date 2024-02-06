@@ -37,7 +37,7 @@ class FlutterMediator {
   void allRoute() {
     for (var element in _routeMap.entries) {
       print(element.key);
-      element.value.call("-----").runtimeType;
+      print(element.value.call("-----").runtimeType);
     }
     print(_routeMap.keys);
   }
