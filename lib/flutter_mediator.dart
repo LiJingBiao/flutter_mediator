@@ -11,6 +11,7 @@ class FlutterMediator {
 
   final Map<String, RouteBuilder> _routeMap = {};
   void registRoute(String path, RouteBuilder routeBuilder) {
+    print("regist route path <${path}>");
     _routeMap[path] = routeBuilder;
   }
 
@@ -24,5 +25,9 @@ class FlutterMediator {
       final route = routeBuilder.call(path);
       return route.send(params: params);
     }
+  }
+
+  void allRoute() {
+    print(_routeMap.keys);
   }
 }
